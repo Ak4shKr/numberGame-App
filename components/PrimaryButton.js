@@ -36,7 +36,3 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
 });
-
-//everthing is working fine
-//lets learn something
-//hoooo
