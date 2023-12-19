@@ -1,4 +1,10 @@
-import { TextInput, Button, View, StyleSheet } from "react-native";
+import {
+  TextInput,
+  Button,
+  View,
+  StyleSheet,
+  ImageBackground,
+} from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 function StartGameScreen() {
   return (
@@ -10,8 +16,14 @@ function StartGameScreen() {
         autoCapitalize="none"
         autoCorrect={false}
       />
-      <PrimaryButton>Reset</PrimaryButton>
-      <PrimaryButton>Comfirm</PrimaryButton>
+      <View style={styles.buttonsContainer}>
+        <View style={styles.buttonContainer}>
+          <PrimaryButton>Reset</PrimaryButton>
+        </View>
+        <View style={styles.buttonContainer}>
+          <PrimaryButton>Comfirm</PrimaryButton>
+        </View>
+      </View>
     </View>
   );
 }
@@ -20,10 +32,12 @@ export default StartGameScreen;
 
 const styles = StyleSheet.create({
   inputContainer: {
+    justifyContent: "center",
+    alignItems: "center",
     marginTop: 100,
     marginHorizontal: 24,
     padding: 16,
-    backgroundColor: "#4e0329",
+    backgroundColor: "#3b021f",
     borderRadius: 8,
     elevation: 4,
     //ios style
@@ -42,5 +56,11 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     fontWeight: "bold",
     textAlign: "center",
+  },
+  buttonsContainer: {
+    flexDirection: "row",
+  },
+  buttonContainer: {
+    flex: 1,
   },
 });
